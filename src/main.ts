@@ -28,7 +28,7 @@ function mostrarContador() {
     }
 }
 
-//  
+// Botón de Reset
 const botonReset = document.getElementById("reset");
 if (botonReset) {
     botonReset.addEventListener("click", function() {
@@ -53,7 +53,7 @@ if (botonDisminuir) {
 const botonBuscar = document.getElementById("botonBuscar");
 
 if (botonBuscar) {
-    botonBuscar.addEventListener("click", function(event: MouseEvent) {
+    botonBuscar.addEventListener("click", function() {
         const barraBuscar = document.getElementById("barraBuscar") as HTMLInputElement;
         const numeroIntroducido: number = parseInt(barraBuscar.value);
         
