@@ -3,13 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Clínica Lemon</title>
   </head>
   <body>
-    <div id="app">
-      <h1>Bootcamp JS - JavaScript SandBox</h1>
+    <div class="turno-display">
+      <h1 class="numero-turno" id="contador"></h1>
+      <p class="texto-turno">Por favor, acérquese al mostrador</p>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="controles">
+      <button id="reset">Reset</button>
+      <button id="botonAnterior">Número anterior</button>
+      <button id="botonSiguiente">Siguiente número</button>
+      <p><button id="botonBuscar">Buscar</button>
+      <input type="search" id="barraBuscar" name="numeroBuscado"></p>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
