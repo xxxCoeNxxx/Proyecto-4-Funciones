@@ -51,8 +51,15 @@ if (botonDisminuir) {
 
 // Asocio el valor introducido al botón Buscar
 const botonBuscar = document.getElementById("botonBuscar");
-    if (botonBuscar) {
-        botonBuscar.addEventListener("click", buscar)
-    }
 
-
+if (botonBuscar) {
+    botonBuscar.addEventListener("click", function(event: MouseEvent) {
+        const barraBuscar = document.getElementById("barraBuscar") as HTMLInputElement;
+        const numeroIntroducido: number = parseInt(barraBuscar.value);
+        
+        if (!isNaN(numeroIntroducido) && numeroIntroducido >=0 && numeroIntroducido <100) {
+            contadorTurno = numeroIntroducido;
+            mostrarContador();
+        }
+    });
+}
