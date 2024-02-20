@@ -3,7 +3,7 @@ let contadorTurno: number = 0;
 mostrarContador();
 
 // Función para incrementar el contador y mostrarlo en pantalla
-function aumentarContador() {
+function aumentarContador(): void {
     contadorTurno++;
     if (contadorTurno > 99) {
         contadorTurno = 0;
@@ -12,7 +12,7 @@ function aumentarContador() {
 }
 
 // Función para disminuir el contador y mostrarlo
-function disminuirContador() {
+function disminuirContador(): void {
     contadorTurno--;
     if (contadorTurno < 0) {
         contadorTurno = 99;
@@ -21,7 +21,7 @@ function disminuirContador() {
 }
 
 // Función para mostrar el contador en pantalla
-function mostrarContador() {
+function mostrarContador(): void {
     const contadorElemento = document.getElementById("contador");
     if (contadorElemento) {
         contadorElemento.textContent = contadorTurno.toString().padStart(2, '0');
@@ -29,7 +29,7 @@ function mostrarContador() {
 }
 
 // Botón de Reset
-const botonReset = document.getElementById("reset");
+const botonReset: HTMLElement | null = document.getElementById("reset");
 if (botonReset) {
     botonReset.addEventListener("click", function() {
         contadorTurno = 0;
@@ -38,19 +38,19 @@ if (botonReset) {
 }
 
 // Asocio la función aumentarContador al evento click del botón
-const botonAumentar = document.getElementById("botonSiguiente");
+const botonAumentar: HTMLElement | null = document.getElementById("botonSiguiente");
 if (botonAumentar) {
     botonAumentar.addEventListener("click", aumentarContador);
 }
 
 // Asocio la función disminuirContador al evento click del botón
-const botonDisminuir = document.getElementById("botonAnterior");
+const botonDisminuir: HTMLElement | null = document.getElementById("botonAnterior");
 if (botonDisminuir) {
     botonDisminuir.addEventListener("click", disminuirContador);
 }
 
 // Asocio el valor introducido al botón Buscar
-const botonBuscar = document.getElementById("botonBuscar");
+const botonBuscar: HTMLElement | null = document.getElementById("botonBuscar");
 
 if (botonBuscar) {
     botonBuscar.addEventListener("click", function() {
