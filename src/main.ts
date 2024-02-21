@@ -29,23 +29,22 @@ function mostrarContador(): void {
 }
 
 // Botón de Reset
+const reset = () => {contadorTurno = 0; mostrarContador();}
+
 const botonReset: HTMLElement | null = document.getElementById("reset");
 if (botonReset) {
-    botonReset.addEventListener("click", function() {
-        contadorTurno = 0;
-        mostrarContador();
-    })
+    botonReset.addEventListener("click", reset)
 }
 
 // Asocio la función aumentarContador al evento click del botón
 const botonAumentar: HTMLElement | null = document.getElementById("botonSiguiente");
-if (botonAumentar) {
+if (botonAumentar instanceof HTMLButtonElement) {
     botonAumentar.addEventListener("click", aumentarContador);
 }
 
 // Asocio la función disminuirContador al evento click del botón
 const botonDisminuir: HTMLElement | null = document.getElementById("botonAnterior");
-if (botonDisminuir) {
+if (botonDisminuir instanceof HTMLButtonElement) {
     botonDisminuir.addEventListener("click", disminuirContador);
 }
 
