@@ -29,7 +29,7 @@ function mostrarContador(): void {
 }
 
 // Botón de Reset
-const reset = () => {contadorTurno = 0; mostrarContador();}
+const reset = (): void => {contadorTurno = 0; mostrarContador();}
 
 const botonReset: HTMLElement | null = document.getElementById("reset");
 if (botonReset) {
