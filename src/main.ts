@@ -49,9 +49,8 @@ if (botonDisminuir instanceof HTMLButtonElement) {
 }
 
 // Asocio el valor introducido al botón Buscar
-
-const buscar = () => {
-    const barraBuscar = document.getElementById("barraBuscar") as HTMLInputElement;
+const buscar = (): void => {
+    const barraBuscar : HTMLInputElement | null = document.getElementById("barraBuscar") as HTMLInputElement;
         const numeroIntroducido: number = parseInt(barraBuscar.value); 
         if (!isNaN(numeroIntroducido) && numeroIntroducido >=0 && numeroIntroducido <100) {
             contadorTurno = numeroIntroducido;
