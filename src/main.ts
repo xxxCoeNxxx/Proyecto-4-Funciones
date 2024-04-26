@@ -37,20 +37,20 @@ if (botonReset) {
 }
 
 // Asocio la función aumentarContador al evento click del botón
-const botonAumentar: HTMLElement | null = document.getElementById("botonSiguiente");
-if (botonAumentar instanceof HTMLButtonElement) {
+const botonAumentar = document.getElementById("botonSiguiente");
+if (botonAumentar != null && botonAumentar != undefined && botonAumentar instanceof HTMLButtonElement) {
     botonAumentar.addEventListener("click", aumentarContador);
 }
 
 // Asocio la función disminuirContador al evento click del botón
-const botonDisminuir: HTMLElement | null = document.getElementById("botonAnterior");
-if (botonDisminuir instanceof HTMLButtonElement) {
+const botonDisminuir = document.getElementById("botonAnterior");
+if (botonDisminuir != null && botonDisminuir != undefined && botonDisminuir instanceof HTMLButtonElement) {
     botonDisminuir.addEventListener("click", disminuirContador);
 }
 
 // Asocio el valor introducido al botón Buscar
 const buscar = (): void => {
-    const barraBuscar : HTMLInputElement | null = document.getElementById("barraBuscar") as HTMLInputElement;
+    const barraBuscar = document.getElementById("barraBuscar") as HTMLInputElement;
         const numeroIntroducido: number = parseInt(barraBuscar.value); 
         if (!isNaN(numeroIntroducido) && numeroIntroducido >=0 && numeroIntroducido <100) {
             contadorTurno = numeroIntroducido;
@@ -58,7 +58,8 @@ const buscar = (): void => {
         }
 }
 
-const botonBuscar: HTMLElement | null = document.getElementById("botonBuscar");
-if (botonBuscar) {
-    botonBuscar.addEventListener("click", buscar);
+// Botón de búsqueda
+const botonBuscar = document.getElementById("botonBuscar");
+if (botonBuscar != null && botonBuscar != undefined && botonBuscar instanceof HTMLButtonElement) {
+    botonBuscar.addEventListener("click", aumentarContador);
 }
