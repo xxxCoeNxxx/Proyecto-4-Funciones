@@ -61,5 +61,5 @@ const buscar = (): void => {
 // Botón de búsqueda
 const botonBuscar = document.getElementById("botonBuscar");
 if (botonBuscar != null && botonBuscar != undefined && botonBuscar instanceof HTMLButtonElement) {
-    botonBuscar.addEventListener("click", aumentarContador);
+    botonBuscar.addEventListener("click", buscar);
 }
